@@ -1,0 +1,683 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: "Source Sans 3", sans-serif;
+    color: #2e2e2e;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    transition: color .3s ease, background-color .3s ease;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.playfair-display {
+    font-family: "Playfair Display", serif;
+}
+
+.source-sans {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.bg-grisclair {
+    background-color: #F7F7F7;
+}
+
+.bg-creme {
+    background-color: #F6F5EC;
+}
+
+.bg-vert {
+    background-color: #CCD8C7;
+}
+
+.text-creme {
+    color: #F6F5EC;
+}
+
+.text-camel{
+    color:#d5c6b2;
+}
+
+.text-grisclair {
+    color: #F7F7F7;
+}
+
+.text-grisfonce {
+    color: #2e2e2e;
+}
+
+.text-mauve {
+    color:#9590AE;
+}
+
+
+
+/* HEADER */
+
+header {
+    min-height: 100vh;
+    padding: 5rem 1.5rem;
+    border-bottom: 2px solid #2e2e2e;
+}
+
+header p {
+    margin-bottom: .5rem;
+    font-size: 1.25rem;
+}
+
+header h1 {
+    font-size: clamp(3rem, 9vw, 6rem);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.containerLogo {
+    position: relative;
+    height: 381px;
+    align-items: center;
+}
+
+.logosaray {
+    position: relative;
+    z-index: 2;
+    width: min(280px, 55vw);
+}
+
+#wings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    width: min(300px, 62vw);
+    height: min(300px, 62vw);
+    transform: translate(-50%, -50%);
+}
+
+#wings img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#wings .gauche {
+    animation: flapgauche 2s infinite ease-in-out;
+    transform-origin: center center;
+}
+
+#wings .droite {
+    animation: flapdroite 2s infinite ease-in-out;
+    transform-origin: center center;
+}
+
+@keyframes flapgauche {
+    0% { transform: perspective(400px) rotateY(-40deg); }
+    50% { transform: perspective(400px) rotateY(40deg); }
+    100% { transform: perspective(400px) rotateY(-40deg); }
+}
+
+@keyframes flapdroite {
+    0% { transform: perspective(400px) rotateY(40deg); }
+    50% { transform: perspective(400px) rotateY(-40deg); }
+    100% { transform: perspective(400px) rotateY(40deg); }
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.navbar-nav .nav-item .nav-link {
+    width: 180px;
+    padding: 1.6rem .5rem;
+    border-radius: 25px;
+    background-color: #2e2e2e;
+    color: #F7F7F7;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.nav-item .nav-link:hover,
+.nav-item .nav-link:focus {
+    background-color: #CCD8C7;
+    color: #2e2e2e;
+}
+
+/* CV */
+
+.cvsaray {
+    min-height: 100vh;
+    padding: 5rem 2rem;
+    border-bottom: 2px solid #2e2e2e;
+}
+
+.cvsaray .photosaraycv {
+    margin-bottom: 1.5rem;
+}
+
+.cvsaray .photosaraycv img:hover{
+    transform: scale(1.25);
+    transition: 1s ease;
+}
+
+.cvsaray h2 {
+    margin-bottom: 1rem;
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cvsaray h3 {
+    margin-top: 1.3rem;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.cvsaray p {
+    margin-bottom: .6rem;
+    font-family: "Source Sans 3", sans-serif;
+    text-align: justify;
+}
+
+.cvsaray a:hover {
+    transition:.5s ease;
+    color: #9590AE;
+    font-weight: 700;
+}
+
+.cvsaray .iconosInfos i{
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+}
+
+.cvsaray .iconoskills img {
+    width: 30px;
+}
+
+.cvsaray .iconoskills img:hover {
+    opacity: 50%;
+}
+
+.divide {
+    border-color: #2e2e2e;
+    opacity: 1;
+}
+
+.up {
+    position: fixed;
+    right: 0;
+    bottom: -25px;
+    z-index: 999;
+    opacity: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+.cvsaray .up a:hover {
+    color: #D5C6B2;
+}
+
+.dates{
+    color: #9590AE;
+    font-weight:600;
+}
+
+/* TITLES */
+
+.sectionLogos,
+.sectionBranding,
+.sectionIllus{
+    padding: 5rem 1.5rem;
+    border-bottom: 2px solid #2e2e2e;
+}
+
+.sectionPhotoshop{
+    padding: 5rem 1.5rem;
+}
+
+.titlelogos h4,
+.titlebranding h4,
+.titleIllus h4,
+.titlephotoshop h4 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* SHARED GALLERIES */
+
+.imagen-contenedor,
+.imagen-contenedor-grand {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.imagen-contenedor img,
+.imagen-contenedor-grand img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 1s ease;
+}
+
+.imagen-contenedor:hover img,
+.imagen-contenedor-grand:hover img {
+    transform: scale(1.3);
+}
+
+/*SECTION LOGO ET ILLUS*/
+
+.sectionLogos a,
+.sectionIllus a,
+.sectionBranding {
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.sectionLogos a:hover,
+.sectionIllus a:hover {
+    color: #D5C6B2;
+}
+
+.logo,
+.illu{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* ----- owl carousel css ----- */
+
+.owl-carousel button.owl-dot {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid rgba(46, 46, 46, 1);
+}
+
+.owl-carousel button.owl-dot.active{
+    background-color: rgba(46, 46, 46, 1);
+}
+
+.owl-carousel button.owl-dot:hover{
+    background-color: rgba(46, 46, 46, 1);
+}
+
+.owl-carousel .owl-item .logo,
+.owl-carousel .owl-item .illu{
+    width: 30%;
+}
+
+.owl-dots {
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+    margin-top: 1rem;
+}
+
+.owl-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap:1rem;
+    color: rgba(46, 46, 46, 1);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.owl-prev i:hover,
+.owl-next i:hover{
+    color:#d5c6b2;
+}
+
+.owl-item{
+    display:flex;
+    justify-content: center;
+}
+
+/* BRANDING */
+
+.sectionBranding .imagen-contenedor {
+    width: min(400px, 100%);
+    height: 300px;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.20);
+    background-color: white;
+    border-radius: 20px;
+}
+
+.sectionBranding .imagen-contenedor-grand{
+    width: min(500px, 100%);
+    height: 610px;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.20);
+    background-color: white;
+    border-radius: 20px;
+}
+
+.sectionBranding .parragraphe {
+    text-align: justify;
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+
+.sectionBranding a:hover {
+    color: #CCD8C7;
+}
+
+.sectionBranding .link a {
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* PHOTOSHOP */
+
+
+.sectionPhotoshop .imagen-contenedor {
+    width: 500px;
+}
+
+.sectionPhotoshop .imagen-contenedor img {
+    object-fit: cover;
+}
+
+.sectionPhotoshop .imagen-contenedor.byw:hover img {
+    transform: scale(1.2);
+}
+
+.sectionPhotoshop .imagen-contenedor:not(.byw)::before,
+.sectionPhotoshop .imagen-contenedor:not(.byw)::before,
+.sectionPhotoshop .imagen-contenedor:not(.byw):not(.bywrond)::before {
+    display: none;
+}
+
+.flip-photo {
+    width: 500px;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    perspective: 1000px;
+}
+
+.flip-photo-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease;
+    transform-style: preserve-3d;
+}
+
+.flip-photo:hover .flip-photo-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-photo-front,
+.flip-photo-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.flip-photo-front img,
+.flip-photo-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-photo-back {
+    transform: rotateY(180deg);
+}
+
+
+footer{
+    background-color: #2e2e2e;
+    color:white;
+}
+
+footer .containerLogo{
+    margin-left: auto;
+}
+
+footer h2,
+footer h3{
+    font-variant: small-caps;
+    font-weight: 700;
+}
+
+footer .btn-contact a{
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    background-color: #d5c6b2;
+    color:#2e2e2e;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-variant:small-caps;
+    font-size: 1.25rem;
+}
+
+footer .btn-contact a:hover{
+    color: white;
+    
+}
+
+.partie2 i{
+    color:red;
+    font-size: 1.25rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILE */
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 3rem 1rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header p {
+        font-size: .9rem;
+    }
+
+    .logo-title #wings{
+        width: 90px;
+        height: 90px;
+    }
+
+    .logo-title.containerLogo{
+        height: 100px;
+        bottom: 7rem;
+    }
+
+    .logo-title .logosaray{
+        width: 85px;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        width: 160px;
+        font-size: .9rem;
+        padding: .9rem 0;
+    }
+
+    .navbar-toggler{
+        margin-bottom: 1.5rem;
+    }
+
+    .cvsaray {
+        padding: 4rem 1rem;
+    }
+
+    .cvsaray h2 {
+        font-size: 1.35rem;
+    }
+
+    .cvsaray p {
+        font-size: .95rem;
+        text-align: left;
+    }
+
+    .cvsaray .photosaraycv {
+        width: min(85%, 260px);
+    }
+
+    .cvsaray .iconoskills {
+        justify-content: center;
+    }
+
+    .cvsaray .iconoskills img {
+        width: 30px;
+        min-width: 30px;
+    }
+
+    .titlelogos h4,
+    .titlebranding h4,
+    .titleillus h4,
+    .titlephotoshop h4 {
+        font-size: 2rem;
+    }
+
+    .owl-carousel .owl-item .logo,
+    .owl-carousel .owl-item .illu{
+        width: 100%;
+        height: 
+    }
+
+    .sectionLogos,
+    .sectionBranding,
+    .sectionIllus,
+    .sectionPhotoshop {
+        padding: 4rem 1rem;
+    }
+
+    .ensemblelogos,
+    .ensembleillus {
+        min-height: auto;
+        gap: 2rem !important;
+    }
+
+    .sectionBranding .imagen-contenedor{
+        height: 240px;
+        margin: 0 0 1.5rem;
+    }
+
+    .sectionBranding .imagen-contenedor-grand {
+        height: 420px;
+        margin: 0;
+    }
+
+    .sectionBranding .text-end {
+        text-align: left !important;
+    }
+
+    .sectionBranding .annee{
+        font-size: 1.25rem;
+    }
+
+    .sectionPhotoshop {
+        gap: 2rem !important;
+    }
+
+    .sectionPhotoshop .imagen-contenedor{
+        width: 100%;
+    }
+
+    .sectionPhotoshop .imagen-contenedor img,
+    .sectionLogos .imagen-contenedor::before,
+    .sectionIllus .imagen-contenedor::before,
+    .sectionBranding.imagen-contenedor::before,
+    .sectionBranding .imagen-contenedor-grand::before,
+    .sectionPhotoshop .imagen-contenedor::before,
+    .sectionPhotoshop .imagen-contenedor.bywrond::before {
+        border-radius: 20px;
+    }
+
+    footer{ 
+        padding-top:3rem;
+        padding-bottom: 3rem;
+    }
+
+    footer .containerLogo{
+    margin-left:0;
+    margin-bottom:0;
+    }
+
+    footer .partie1 p,
+    footer .partie1 h2{
+        text-align: center;
+    }
+
+    footer .partie1 .btn-contact{
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .partie2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .up {
+        right: 10px;
+        font-size: 1.2rem;
+    }
+
+    
+
+
+}
